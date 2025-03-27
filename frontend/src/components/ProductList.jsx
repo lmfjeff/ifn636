@@ -19,9 +19,9 @@ const ProductList = ({ products, setProducts, setEditingProduct }) => {
     <div>
       {products.map((product) => (
         <div key={product._id} className="bg-gray-100 p-4 mb-4 rounded shadow">
-          <h2 className="font-bold">{product.name}</h2>
-          <p>{product.quantity}</p>
-          <p>{product.supplier}</p>
+          <h2 className="font-bold">Name: {product.name}</h2>
+          <p>Qty: {product.quantity}</p>
+          <p>Supplier {product.supplier}</p>
           <div className="mt-2">
             <button
               onClick={() => setEditingProduct(product)}

@@ -59,6 +59,7 @@ const ProductForm = ({ products, setProducts, editingProduct, setEditingProduct 
       />
       <input
         type="text"
+        placeholder="Supplier"
         value={formData.supplier}
         onChange={(e) => setFormData({ ...formData, supplier: e.target.value })}
         className="w-full mb-4 p-2 border rounded"

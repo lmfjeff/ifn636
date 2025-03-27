@@ -1,5 +1,32 @@
 # **Assignment: Full-Stack CRUD Application Development with DevOps Practices**
 
+## JIRA board URL
+```
+https://ifn636-software-lifecycle.atlassian.net/jira/software/projects/IMS/boards/34
+```
+
+## CICD workflow explained
+
+- Github action is triggered only on push to the main branch
+- Workflow is run on self-hosted AWS EC2 instance
+
+1. latest code is checkouted in the runner
+2. node 22 is set up
+3. stop the pm2 service
+4. install npm package for backend
+5. install npm package for frontend & build the frontend
+6. run test on backend product crud service
+7. install package in root folder
+8. create/modify .env for backend
+9. use pm2 to serve frontend & start backend service
+
+
+## Project setup instruction
+1. git clone the repository to your local computer
+2. cd to root folder, run `npm run install-all`
+3. run `npm run dev` to start frontend & backend locally
+
+
 ## **Objective**
 
 You have been provided with a starter project that includes user authentication using  **Node.js, React.js, and MongoDB**. Your task is to extend this application by implementing **CRUD (Create, Read, Update, Delete) operations** for a real-world application of your choice, while following industry best practices such as:
